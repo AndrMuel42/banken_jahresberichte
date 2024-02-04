@@ -34,10 +34,10 @@ Der Code ist in zwei Jupyter-Notebooks erstellt worden, die im Repository zu fin
 Der Artikel ist noch nicht erschienen. Das Textdokument sowie die dazu passenden Grafiken sind hier im Repository zu finden.
 
 ## 9 Aufwandslogbuch
-Vorbereitung Themenwahl, Recherche Bankengeschichte: 4h
-Datenbeschaffung: 2h
-Datenreinigung: ca. 12h (einiges Trial and Error nötig)
-Datenanalyse: 12h (mehrere Durchläufe mit unterschiedlichen Kombinationen von Suchbegriffen nötig)
-Datenvisualisierung: 2h
-Schreiben Artikel & Dokumentation: ca. 8h
+- Vorbereitung Themenwahl, Recherche Bankengeschichte: 4h
+- Datenbeschaffung: 2h
+- Datenreinigung: ca. 12h (einiges Trial and Error nötig)
+- Datenanalyse: 12h (mehrere Durchläufe mit unterschiedlichen Kombinationen von Suchbegriffen nötig)
+- Datenvisualisierung: 2h
+- Schreiben Artikel & Dokumentation: ca. 8h
 
