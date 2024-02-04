@@ -6,6 +6,7 @@ Analyse aller UBS-Jahresberichte (Jahres-Reviews, ohne Zahlenteil) von 1999 bis 
 - Neuigkeit: Häufigkeitsanalysen in Texten entlang der Zeitachse - dieser Ansatz wurde in datenjournalistischen Projekten schon mehrfach angewendet. Allen voran simpel und doch eindrucksvoll vom "Atlantic", der sämtliche "State of the Union"-Reden der US-Präsidenten seit dem 18. Jahrhundert auf Kernbegriffe hin untersuchte und damit eine knappe und doch reichhaltige Geschichte der USA entlang weniger Grafiken erzählte. Eine entsprechende datenjournalistische Aufarbeitung von Bankberichten ist mir nicht bekannt. (Wenngleich es eine Reihe von Projekten gibt, um Geschäftsberichte auszuwerten - etwa ein von der Universität Zürich koordiniertes [Citizen-Science-Projekt](https://www.citizenscience.uzh.ch/en/projects/ki.html), um die neuen Nachhaltigkeitsberichte systematisch zu untersuchen, welche Schweizer Unternehmen ab dem Jahr 2024 anfertigen müssen.)
 - Relevanz: Seitdem sie die Credit Suisse übernommen hat, ist die UBS für die Schweiz erst recht "too big to fail". Es ist für die Schweiz eminent wichtig zu verstehen, wie diese Bank funktioniert - und wie sie zu dem geworden ist, was sie heute ist. Meine datenjournalistische Auswertung der Jahresberichte bietet einen neuen und dennoch relevanten Zugang zur jüngeren Geschichte der Bank.
 - Aufwand und Ertrag: Für die Grundgeschichte vertretbar, zuletzt 4 bis 5 Arbeitstage. Eine Ausweitung auf die Geschäftsberichte der Vorgängerbanken der UBS - Schweizerischer Bankverein und Schweizerische Bankgesellschaft - hatte ich zunächst ebenfalls eingeplant. Allerdings erhöhte dies den Zeitaufwand signifikant, da keine gut digitalisierten und leicht zugänglichen Versionen der früheren Geschäftsberichte vorliegen. Ich müsste einerseits alle Geschäftsberichte (respektive Auszüge daraus) eigenhändig in Bibliotheken anfordern und händisch abfotografieren, andererseits diese Bilder via Tesseract wieder in Text umwandeln. Bei Tests stellte einerseits die Bildqualität ein Problem dar, andererseits auch die richtige Einstellung von Tesseract. Die Qualität der Texterfassung aus den Bildern verbesserte sich bei Tests deutlich, nachdem ich sowohl die Bildqualität erhöhte (eng gewählter Bildausschnitt, sehr flach anliegende Seiten, usw.), die Bilder nachbearbeitete (Hoher Bildkontrast, Umwandlung in Schwarzweiss-Bilder, eng gewählter Bildausschnitt) und schliesslich auch das Textdokument nachbearbeitete (mit Bindestrich getrennte Wörter zusammenführen, Wörterbücher zur Prüfung und teilweise automatischen Korrektur des Texts nutzen bei häufigen Fehlern...). Aber es zeigte sich, dass ein grosser Zeitaufwand für manuelle Arbeit verbleiben würde, so dass das Projekt nicht in nützlicher Frist abgeschlossen werden konnte.
+- Einsatz von ChatGPT: Grössere Teile meines Codes sind im Hin-und-her mit ChatGPT (basierend auf GPT-3.5) entstanden.
 - Knackpunkt: Die Resultate könnten erwartbar und banal sein.
 
 ## 1 Daten beschaffen
@@ -21,21 +22,22 @@ Die PDF-zu-Text-Konversion funktionierte grundsätzlich sehr gut. Ich filterte i
 Ich schrieb nun in einem TXT-File eine erste Liste an Suchbegriffen, welche ich in den Jahresberichten zählen wollte. Ich setzte auf eine zweistufige Struktur von Oberbegriffen/Klassen, welche einen bis rund 30 Unterbegriffe enthielt; dazu zählten indes auch alle Deklinationsformen von Adjektiven. Ich musste einige Runden lang iterieren und mich in die Jahresberichte selbst vertiefen, bis ich die für meine Zwecke taugliche Kombination von Suchbegriffen fand. Kenntnisse der jüngeren Bankengeschichte der Schweiz sowie einige Recherchen im NZZ-eigenen Archiv halfen bei diesem Prozess.
 
 ## 5 Daten visualisieren
-Im ersten Schritt arbeitete ich mit Matplotlib, bis ich mir ein genaues Bild der Daten gemacht hatte. Als ich die richtige Kombination an Suchbegriffen gefunden und den Datensatz ausgewertet hatte, exportierte ich mir die Häufigkeitsdaten in ein CSV-File, welches ich anschliessend mit dem NZ-eigenen Grafiktool Q aufbereitete. Für diese erste Datengeschichte zu den UBS-Berichten reicht dies vollumfänglich aus. Wenn ich im zweiten Schritt - analog zur Atlantic-Geschichte - den Zeithorizont nochmals bedeutend ausweiten kann, könnte sich auch eine eigenständigere Gestaltungsform anbieten, die es den Leserinnen und Lesern erlaubt, sich selbständig durch den Datensatz zu bewegen; Suchbegriffe auszuwählen und zu vergleichen etc.
+Im ersten Schritt arbeitete ich mit Matplotlib, bis ich mir ein genaues Bild der Daten gemacht hatte. Als ich die richtige Kombination an Suchbegriffen gefunden und den Datensatz ausgewertet hatte, exportierte ich mir die Häufigkeitsdaten in ein CSV-File, welches ich anschliessend mit dem NZZ-eigenen Grafiktool Q aufbereitete. Für diese erste Datengeschichte zu den UBS-Berichten reicht dies vollumfänglich aus. Wenn ich im zweiten Schritt - analog zur Atlantic-Geschichte - den Zeithorizont nochmals bedeutend ausweiten kann, könnte sich auch eine eigenständigere Gestaltungsform anbieten, die es den Leserinnen und Lesern erlaubt, sich selbständig durch den Datensatz zu bewegen; Suchbegriffe auszuwählen und zu vergleichen etc.
 
 ## 6 Ergänzen durch klassische Recherche
 Da ich die vergangenen vier Jahre das Bankendossier der NZZ geführt habe, konnte ich die Analyse grösstenteils selber vornehmen, mitunter mit Rückgriff auf historische Arbeiten oder frühere Artikel zu einzelnen der Fokusthemen.
 
 ## 7 Dokumentieren Code und statistische Annahmen
+Der Code ist in zwei Jupyter-Notebooks erstellt worden, die im Repository zu finden sind. Das erste enthält die programmiertechnische Hauptarbeit zur Datenbeschaffung und -reinigung, das zweite brauchte ich zum Testen und Visualisieren meiner Suchbegriffe und Hypothesen. Es diente also vor allem der Analyse und Visualisierung, gibt programmiertechnisch allerdings nicht besonders viel her.
 
 ## 8 Link auf Publikation
-Der Artikel ist noch nicht erschienen.
+Der Artikel ist noch nicht erschienen. Das Textdokument sowie die dazu passenden Grafiken sind hier im Repository zu finden.
 
 ## 9 Aufwandslogbuch
-Vorbereitung Themenwahl: 2h
+Vorbereitung Themenwahl, Recherche Bankengeschichte: 4h
 Datenbeschaffung: 2h
 Datenreinigung: ca. 12h (einiges Trial and Error nötig)
-Datenanalyse: 12h (mehrere Durchläufe mit Suchbegriffen nötig)
+Datenanalyse: 12h (mehrere Durchläufe mit unterschiedlichen Kombinationen von Suchbegriffen nötig)
 Datenvisualisierung: 2h
 Schreiben Artikel & Dokumentation: ca. 8h
 
