@@ -34,7 +34,7 @@ Da ich die vergangenen vier Jahre das Bankendossier der NZZ geführt habe, konnt
 Der Code ist in zwei Jupyter-Notebooks erstellt worden, die im Repository zu finden sind. Das erste enthält die programmiertechnische Hauptarbeit zur Datenbeschaffung und -reinigung, das zweite brauchte ich nur zum Testen und Visualisieren meiner Suchbegriffe und Hypothesen. Es diente also vor allem der Analyse und Visualisierung, gibt programmiertechnisch allerdings nicht besonders viel her.
 
 ## 8 Link auf Publikation
-Der Artikel ist noch nicht erschienen. Das Textdokument sowie die dazu passenden Grafiken sind hier im Repository zu finden.
+Der Artikel ist noch nicht erschienen. Ein PDF-Dokument des Artikels inkl. den dazugehörigen Grafiken ist hier im Repository zu finden. Falls dennoch ein Login in interne Firmentools nötig ist, um die digitale Version im Layout zu begutachten, bitte mich nochmals kurz anfragen.
 
 ## 9 Aufwandslogbuch
 - Vorbereitung Themenwahl, Recherche Bankengeschichte: 4h
