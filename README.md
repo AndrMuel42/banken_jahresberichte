@@ -42,5 +42,5 @@ Der Artikel ist noch nicht erschienen. Das Textdokument sowie die dazu passenden
 - Datenreinigung: ca. 12h (einiges Trial and Error nötig)
 - Datenanalyse: 12h (mehrere Durchläufe mit unterschiedlichen Kombinationen von Suchbegriffen nötig)
 - Datenvisualisierung: 2h
-- Schreiben Artikel & Dokumentation: ca. 8h
+- Schreiben Artikel & Dokumentation: ca. 12h
 
